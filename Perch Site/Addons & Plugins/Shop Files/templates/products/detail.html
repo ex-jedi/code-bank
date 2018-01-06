@@ -1,0 +1,35 @@
+<div class="product-detail-div">
+	<h1 class="product-detail-title">
+		<a href="/shop/products/<perch:shop id="slug" type="slug" />">
+		<perch:shop id="title" type="text" />
+		</a>
+	</h1>
+	<ul class="bxslider">
+				<perch:repeater id="product-images-slider">
+				<li>
+						<img class="product-slider-image" src="<perch:shop type="image" id="product-slider-image" label="Image" width="1200" />" alt="<perch:shop type="text" id="alt" label="Short description" />"
+						sizes="(max-width: 1270px) 80vw, 60vw"
+					srcset="<perch:shop type="image" id="product-slider-image" width="1100" /> 1100w,
+										<perch:shop type="image" id="product-slider-image" width="900" /> 900w,
+										<perch:shop type="image" id="product-slider-image" width="700" /> 700w,
+										<perch:shop type="image" id="product-slider-image" width="500" /> 500w,
+										<perch:shop type="image" id="product-slider-image" width="300" /> 300w" />
+				</li>
+				</perch:repeater>
+	</ul>
+<div class="product-detail-text">
+	<perch:shop id="detail-description" type="textarea" />
+	<perch:if not-exists="has_variants">
+		<p>£<perch:shop id="current_price" type="text" /></p>
+	</perch:if>
+</div>
+<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart.php">
+	<perch:if exists="has_variants">
+		<perch:input id="product" type="select" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
+		<perch:input type="submit" value="Add to cart" />
+	<perch:else />
+		<perch:input id="product" type="hidden" env-autofill="false" value="<perch:shop id="productID" type="hidden" />" />
+		<perch:input type="submit" value="Add to cart" />
+	</perch:if>
+</perch:form>
+</div>

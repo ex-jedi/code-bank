@@ -1,0 +1,87 @@
+
+		<table class="cart">
+		<h3 class="static-cart-title">Your Order</h3>
+			<tr>
+				<th>Item</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Total</th>
+			</tr>
+			<perch:cartitems>
+				<tr>
+					<td>
+						<span class="cart-item-title"><perch:cartitem id="title" /></span>
+							<perch:if exists="variant_desc">
+							        <span class="cart-variant">(<perch:cartitem id="variant_desc" />)</span>
+							</perch:if>
+						<perch:cartitem class="cart-image" id="main-product-image" type="image" width="100" output="tag" />
+						<div class="desc">
+							<perch:cartitem id="description" type="textarea" markdown="true" />
+						</div>
+					</td>
+					<td><perch:cartitem id="quantity" /></td>
+					<td class="money"><perch:cartitem id="price_without_tax_formatted" /></td>
+					<td class="money"><perch:cartitem id="total_without_tax_formatted" /></td>
+				</tr>
+			</perch:cartitems>
+
+			<perch:if id="total_discounts" match="gt" value="0.00">
+			<tr class="total">
+				<th colspan="3">
+					Total
+				</th>
+				<td class="money">
+					<perch:shop id="total_items_formatted" />
+				</td>
+			</tr>
+			<tr class="total">
+				<th colspan="3">
+					Discount (<perch:shop id="discount_code" />)
+				</th>
+				<td class="money">
+					<perch:shop id="total_discounts_formatted" />
+				</td>
+			</tr>
+			<perch:else />
+			<tr class="total">
+				<th colspan="3">
+					Total
+				</th>
+				<td class="money">
+					<perch:shop id="total_items_formatted" />
+				</td>
+			</tr>
+			</perch:if>
+			<tr class="total">
+				<th colspan="3">
+					Shipping: <span class="not-bold"><perch:shop id="shipping_method" /></span>				</th>
+				<td class="money">
+					<perch:shop id="total_shipping_formatted" />
+				</td>
+			</tr>
+			<tr class="total">
+				<th colspan="3">
+					Tax
+				</th>
+				<td class="money">
+					<perch:shop id="total_tax" format="$:%.2n" replace="0.00|Included" />
+				</td>
+			</tr>
+			<tr class="total">
+				<th colspan="3">
+					Grand total
+				</th>
+				<td class="money cart-total">
+					<perch:shop id="grand_total_formatted" />
+				</td>
+			</tr>
+		</table>
+		<div class="cart-next-step-div">
+			<div class="cart-progress-div">
+					<a class="cart-continue-shopping-link confirmation-cart-link" href="/shop/cart.php">Edit cart</a>
+					<a class="cart-checkout-link confirmation-pay-link" href="checkout.php">Proceed to payment</a>
+			</div>
+			<?php if(perch_member_logged_in()){ ?>
+		 <a class="cart-logout-link" href="/shop/logout.php">Log out and clear cart</a>
+			<?php } ?>
+		</div>

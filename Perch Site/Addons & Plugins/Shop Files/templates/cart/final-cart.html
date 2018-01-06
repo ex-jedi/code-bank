@@ -1,0 +1,105 @@
+<perch:if id="product_count" match="gt" value="0">
+	<h1 class="cart-title">Your Cart (<perch:shop id="item_count" />)</h1>
+	<perch:form id="cart" app="perch_shop">
+		<perch:input type="submit" value="Update" hidden="true" aria-hidden="true" />
+		<table class="cart">
+			<tr>
+				<!-- <th>Product Code</th> -->
+				<th>Item</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Total</th>
+			</tr>
+			<perch:cartitems>
+				<tr>
+					<!-- <td><perch:cartitem id="sku" /></td> -->
+					<td>
+						<span class="cart-item-title"><perch:cartitem id="title" /></span>
+							<perch:if exists="variant_desc">
+							        <span class="cart-variant">(<perch:cartitem id="variant_desc" />)</span>
+							</perch:if>
+						<perch:cartitem class="cart-image" id="main-product-image" type="image" width="100" output="tag" />
+						<div class="desc">
+							<perch:cartitem id="description" type="textarea" markdown="true" />
+						</div>
+						<button type="submit" class="remove_cart" name="del:<perch:cartitem id="identifier" />" value="1">Remove</button>
+					</td>
+					<td><perch:input id="qty:<perch:cartitem id="identifier" />" value="<perch:cartitem id="quantity" />" type="number" min="0" /><perch:input class="update-cart" type="submit" value="Update" />
+					</td>
+					<td class="money"><perch:cartitem id="price_without_tax_formatted" /></td>
+					<td class="money"><perch:cartitem id="total_without_tax_formatted" /></td>
+				</tr>
+			</perch:cartitems>
+			<perch:if id="total_discounts" match="gt" value="0.00">
+			<tr class="total">
+				<th colspan="3">
+					Total
+				</th>
+				<td class="money">
+					<perch:shop id="total_items_formatted" />
+				</td>
+			</tr>
+				<tr class="total">
+					<th colspan="3">
+						Discount (<perch:shop id="discount_code" />)
+					</th>
+					<td class="money">
+						<perch:shop id="total_discounts_formatted" />
+					</td>
+				</tr>
+			<perch:else />
+				<tr class="total">
+					<th colspan="3">
+						Total
+					</th>
+					<td class="money">
+						<perch:shop id="total_items_formatted" />
+					</td>
+				</tr>
+			</perch:if>
+			<tr class="total">
+				<th colspan="3">
+					Shipping: <span class="not-bold"><perch:shop id="shipping_method" /></span>
+				</th>
+				<td class="money">
+					<perch:shop id="total_shipping_formatted" />
+				</td>
+			</tr>
+			<tr class="total">
+				<th colspan="3">
+					Tax
+				</th>
+				<td class="money">
+					<perch:shop id="total_tax" replace="0.00|Included" />
+				</td>
+			</tr>
+			<tr class="total">
+				<th colspan="3">
+					Grand total
+				</th>
+				<td class="money cart-total">
+					<perch:shop  id="grand_total_formatted" />
+				</td>
+			</tr>
+		</table>
+		<div class="discount">
+			<perch:label for="discount">
+				Discount code
+			</perch:label>
+				<form id="discount-code" method="post">
+					<perch:input type="text" id="discount_code" />
+					<perch:input class="discount-code" type="submit" value="Apply code" />
+				</td>
+				</form>
+			</div>
+	</perch:form>
+  <div class="cart-next-step-div">
+    <div class="cart-progress-div">
+        <a class="cart-continue-shopping-link confirmation-cart-link" href="/shop/">Continue Shopping</a>
+        <a class="cart-checkout-link confirmation-pay-link" href="checkout.php">Proceed to payment</a>
+    </div>
+  </div>
+<perch:else />
+<h1 class="cart-title" id="empty-cart-message">Your cart is empty!</h1>
+<h2 id="back-to-shop-heading"><a class="cart-continue-shopping-link" href="/shop/">Back to the shop.</a></h2>
+</perch:if>

@@ -1,0 +1,41 @@
+<!-- Working Product Detail Page With Radio Buttons -->
+
+<perch:shop id="sku" type="text" label="SKU" required="true" order="1" />
+
+<div class="product-detail-div">
+	<h1>
+		<a href="/shop/products/<perch:shop id="slug" type="slug" />">
+		<perch:shop id="title" type="text" />
+		</a>
+	</h1>
+	<img src="<perch:shop id="main-product-image" type="image" width="500" />" alt="" />
+	  <p>
+	    <perch:shop id="description" type="textarea" editor="markitup" />
+
+	  </p>
+
+	<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart.php">
+
+		<perch:productopts>
+		  <fieldset>
+		    <legend><perch:productopt id="title" /> Options</legend>
+		    <perch:productvalues>
+		      <perch:before><ul></perch:before>
+
+		      <li>
+		        <label>
+		          <perch:input id="options" name="opt-<perch:productvalue id="optionID" />[]"
+		            value="<perch:productvalue id="valueID" />" type="radio" required="required" />
+		          <perch:productvalue id="valueTitle" />
+		        </label>
+		      </li>
+		      <perch:after></ul></perch:after>
+		    </perch:productvalues>
+		  </fieldset>
+		</perch:productopts>
+			<perch:input id="product" type="hidden" env-autofill="false" value="<perch:shop id="productID" type="hidden" env-autofill="false" />" />
+			<perch:input type="submit" value="Add to cart" />
+		</perch:form>
+
+
+</div>

@@ -1,0 +1,8 @@
+prepros.cfg
+perch/resources/
+perch/config/shop.php
+shop/checkout.php
+node_modules/
+package.json
+prepros-6.config
+*.db

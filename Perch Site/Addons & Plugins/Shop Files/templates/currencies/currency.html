@@ -1,0 +1,10 @@
+<perch:shop id="currencyTitle" type="text" size="l" label="Name" required="true" />
+<perch:shop id="currencyCode" type="text" size="s" label="Currency code" required="true" />
+
+<perch:shop id="currencySymbol" type="text" size="s" label="Symbol" required="true" />
+<perch:shop id="currencySymbolPosition" type="shop_currency_symbol_position" label="Symbol position" required="true" />
+
+
+<perch:shop id="currencyDecimals" type="number" size="s" label="Decimal places for formatting" step="1" min="0" default="2" />
+<perch:shop id="currencyRate" type="number" size="s" label="Exchange rate" help="Against reporting currency" step="0.001" min="0" default="1.0000" />
+<perch:shop id="currencyActive" type="checkbox" value="1" label="Enabled" />

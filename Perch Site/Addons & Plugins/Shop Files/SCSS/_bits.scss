@@ -1,0 +1,115 @@
+// Colour, font stacks, media queries, that kind of thing.
+// This fine is imported before style.scss and after _normalize.scss
+
+
+// Colour Variables
+
+$link-color: #2C31FC;
+$shop-grey: #cdd0e7;
+$dark-grey: #717171;
+$error-color: #d10000;
+$blue-border: #38A8EB;
+
+//Spacing
+
+$spacing-1: 30px;
+$spacing-2: 60px;
+$spacing-3: 90px;
+
+// Font stacks
+
+
+@font-face {
+  font-family: 'Optimus Princeps';
+  src: url('/fonts/optimusprincepssemibold-webfont.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/optimusprincepssemibold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/optimusprincepssemibold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/optimusprincepssemibold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/fonts/optimusprincepssemibold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/optimusprincepssemibold-webfont.svg#Accidental President') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('/fonts/roboto-light-webfont.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/roboto-light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/roboto-light-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/roboto-light-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/fonts/roboto-light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/roboto-light-webfont.svg#Accidental President') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url('/fonts/roboto-thin-webfont.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/roboto-thin-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/roboto-thin-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/roboto-thin-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/fonts/roboto-thin-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/roboto-thin-webfont.svg#Accidental President') format('svg'); /* Legacy iOS */
+}
+
+//Media Queries //
+
+@mixin breakpoint($point) {
+
+   @if $point == first {
+    @media (max-width: 1700px) { @content; }
+  }
+
+  @if $point == second {
+    @media (max-width: 1450px) { @content; }
+  }
+
+    @if $point == contact-image {
+    @media (max-width: 1530px) { @content; }
+  }
+
+    @if $point == third {
+    @media (max-width: 1270px) { @content; }
+  }
+
+    @if $point == fourth {
+    @media (max-width: 1080px) { @content; }
+  }
+
+    @if $point == fifth {
+    @media (max-width: 1000px) { @content; }
+  }
+
+     @if $point == fifth-alt {
+    @media (min-width: 1000px) { @content; }
+  }
+
+      @if $point == gallery-section {
+    @media (max-width: 900px) { @content; }
+  }
+
+    @if $point == nearly-sixth {
+    @media (max-width: 750px) { @content; }
+  }
+
+      @if $point == footer {
+    @media (max-width: 690px) { @content; }
+  }
+        @if $point == menu {
+    @media (max-width: 600px) { @content; }
+  }
+
+  @if $point == gallery {
+    @media (max-width: 550px) { @content; }
+  }
+
+         @if $point == pre-sixth {
+    @media (max-width: 509px) { @content; }
+  }
+
+      @if $point == sixth {
+    @media (max-width: 500px) { @content; }
+  }
+
+        @if $point == last {
+    @media (max-width: 380px) { @content; }
+  }
+
+}

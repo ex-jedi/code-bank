@@ -1,0 +1,30 @@
+<perch:before>
+<h2 class="address-edit-subtitle">Your Addresses</h2>
+<div class="confirmation-addresses-wrapper address-edit-wrapper">
+</perch:before>
+	<div class="addresses-div">
+		<h4 class="confirmation-address-title"><perch:shop id="addressTitle" replace="default|Billing Address, shipping|Shipping Address"/></h4>
+	 <perch:shop id="addressFirstName" /> <perch:shop id="addressLastName" />
+	 <perch:if exists="addressCompany"><br /><perch:shop id="addressCompany" /><br /></perch:if>
+	 	<perch:if not-exists="addressCompany"><br /></perch:if>
+	 <perch:if exists="address_1"><perch:shop id="address_1" /><br /></perch:if>
+	 <perch:if exists="address_2"><perch:shop id="address_2" /><br /></perch:if>
+	 <perch:if exists="city"><perch:shop id="city" /> <br /></perch:if>
+	 <perch:if exists="county"><perch:shop id="county" /> <br /></perch:if>
+	 <perch:if exists="postcode"><perch:shop id="postcode" /> <br /></perch:if>
+	 <perch:if exists="country_name"><perch:shop id="country_name" /></perch:if>
+	 <br>
+	<noscript>
+		<a class="edit-address" href="/shop/addresses/<perch:shop id="addressID" />">Edit (if JavaScript is disabled).</a>
+	</noscript>
+	<form>
+	<input class="button" id="edit-address-button" type="button" value="Edit" onClick="parent.location='/shop/edit-account/<perch:shop id="addressID" />'">
+	</form>
+ 	</div>
+<perch:after>
+</div>
+<div class="account-page-links-div">
+  <span id="change-password" class="cart-logout-link change-password-link">Change your password</span>
+  <a class="cart-logout-link account-logout-link" href="/shop/logout.php">Log out</a>
+</div>
+</perch:after>

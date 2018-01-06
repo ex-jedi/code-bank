@@ -1,0 +1,68 @@
+<perch:shop id="sku" type="text" label="SKU (Product Code)" required="true" order="1" />
+<perch:shop id="title" type="text" label="Product Title" required="true" order="2" />
+
+<!-- Listing Image -->
+<perch:shop id="main-product-image" type="image" divider-before="Product Listing" label="Product Listing Image"  order="3" width="600" />
+<!-- 500 px image -->
+<perch:shop id="main-product-image" type="image" suppress="true" width="500" />
+<!-- 400 px image -->
+<perch:shop id="main-product-image" type="image" suppress="true" width="400" />
+<!-- 300 px image -->
+<perch:shop id="main-product-image" type="image" suppress="true" width="300" />
+<!-- 100 px image -->
+<perch:shop id="main-product-image" type="image" suppress="true" width="100" />
+
+
+<!-- Short Description -->
+<perch:shop id="description" type="textarea" label="Subtitle, for listing page." type="text"  order="4"  size="xl" />
+<!-- Detailed Description -->
+<perch:shop id="detail-description" type="textarea" label="Detailed description" editor="redactor" order="3" html="true" size="xxl" order="6" />
+
+<!-- Detail Page Slider Images -->
+			<perch:repeater id="product-images-slider" label="Product Slider Images" help="10 images maximum" max="10" order="5" divider-before="Product Detail Page">
+			<li>
+					<img class="product-slider-image" src="<perch:shop type="image" id="product-slider-image" label="Image" width="1200" />" alt="<perch:shop type="text" id="alt" label="Short description" />"
+					sizes="(max-width: 1270px) 80vw, 60vw"
+				srcset="<perch:shop type="image" id="product-slider-image" width="1100" /> 1100w,
+									<perch:shop type="image" id="product-slider-image" width="900" /> 900w,
+									<perch:shop type="image" id="product-slider-image" width="700" /> 700w,
+									<perch:shop type="image" id="product-slider-image" width="500" /> 500w,
+									<perch:shop type="image" id="product-slider-image" width="300" /> 300w" />
+			</li>
+			</perch:repeater>
+
+
+<!-- DO NOT EDIT BELOW  -->
+<perch:shop id="slug" type="slug" editable="true" indelible="true" label="Slug" for="title sku" order="10" divider-before="Meta data" />
+
+<perch:shop id="status" type="shop_status" label="Status" />
+
+<perch:shop id="brand" type="shop_brand" label="Brand" allowempty="true" />
+
+<perch:categories id="category" set="products" label="Category">
+	<perch:category id="catTitle" />
+</perch:categories>
+
+<perch:shop id="catalog_only" type="shop_catalog_only" label="Catalog only" />
+<perch:shop id="price" type="shop_currency_value" label="Price" divider-before="Pricing" size="m" min="0" step="any" />
+<perch:shop id="sale_price" type="shop_currency_value" label="Sale price" size="m" min="0" step="any" />
+<perch:shop id="trade_price" type="shop_currency_value" label="Trade price" size="m" min="0" step="any" runway="true" />
+<perch:shop id="on_sale" type="checkbox" value="1" label="Use sale price" />
+<perch:shop id="tax_group" type="shop_tax_group" label="Tax group" required="true" />
+
+
+<perch:shop id="stock_status" type="shop_stock_status" label="Stock status" divider-before="Stock" required="true" />
+<perch:shop id="stock_level" type="number" label="Stock level" size="s" />
+<perch:shop id="stock_location" type="shop_stock_location" label="Count stock" />
+<perch:shop id="max_in_cart" type="number" label="Max quantity in cart" size="s" />
+
+<perch:shop id="requires_shipping" type="shop_requires_shipping" label="Requires shipping" divider-before="Shipping" />
+<perch:shop id="weight" type="number" label="Shipping weight" size="s" />
+<perch:shop id="width" type="number" label="Width" size="s" />
+<perch:shop id="height" type="number" label="Height" size="s" />
+<perch:shop id="depth" type="number" label="Depth" size="s" />
+
+<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart.php">
+	<perch:input id="product" type="hidden" env-autofill="false" value="<perch:shop id="productID" type="hidden" env-autofill="false" />" />
+	<perch:input type="submit" value="Add to cart" />
+</perch:form>

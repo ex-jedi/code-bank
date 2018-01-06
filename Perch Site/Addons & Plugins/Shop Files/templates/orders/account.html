@@ -1,0 +1,26 @@
+<perch:before>
+<h2 class="account-subtitle">Your Orders</h2>
+</perch:before>
+
+<table class="order-status-table">
+<thead>
+  <tr>
+    <th>Order Id</th>
+    <th>Invoice number</th>
+    <th>Date</th>
+    <th>Grand Total</th>
+    <th>Shipping</th>
+    <th>Status</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><perch:shop id="orderID" /></td>
+    <td><perch:shop id="orderInvoiceNumber" /></td>
+    <td><perch:shop id="orderCreated" type="date" format="d F Y H:i" /></td>
+    <td><perch:shop id="orderTotal" /></td>
+    <td><perch:shop id="orderShippingTotal"/></td>
+    <td><perch:shop id="orderStatus" format="UC" /></td>
+  </tr>
+</tbody>
+</table>

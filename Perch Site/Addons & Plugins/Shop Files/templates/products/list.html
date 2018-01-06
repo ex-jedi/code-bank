@@ -1,0 +1,36 @@
+<div class="product-listing-div">
+	<h2 class="product-listing-title">
+		<a href="/shop/products/<perch:shop id="slug" type="slug" />">
+			<perch:shop id="title" type="text" />
+		</a>
+	</h2>
+
+	<a href="/shop/products/<perch:shop id="slug" type="slug" />">
+	<img class="main-product-image" src="<perch:shop type="image" id="main-product-image" width="600" />" alt="<perch:shop id="title" type="text" />"
+	sizes="(max-width: 1270px) 80vw, 30vw"
+	srcset="<perch:shop type="image" id="main-product-image" width="500" /> 500w,
+						<perch:shop type="image" id="main-product-image" width="400" /> 400w,
+						<perch:shop type="image" id="main-product-image" width="300" /> 300w">
+	</a>
+
+	<div class="product-listing-text">
+		<h3 class=listing-subtitle>
+			<perch:shop id="description" type="textarea" />
+		</h3>
+		<p class="listing-price">
+			<perch:if not-exists="has_variants">
+			<a href="/shop/products/<perch:shop id="slug" type="slug" />">
+				<perch:shop id="current_price" type="shop_currency_value" />
+			</a>
+			</perch:if>
+			<perch:if exists="has_variants">
+			<a href="/shop/products/<perch:shop id="slug" type="slug" />">
+				From <perch:shop id="current_price" type="shop_currency_value" />
+			</a>
+			</perch:if>
+		</p>
+<div class="details-wrapper">
+	<a class="view-details-popup" href="/shop/products/<perch:shop id="slug" type="slug" />">View Details</a>
+</div>
+	</div>
+</div>

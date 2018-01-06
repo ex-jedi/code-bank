@@ -1,0 +1,3 @@
+perch/resources/
+node_modules/
+*.db
