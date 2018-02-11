@@ -105,6 +105,16 @@ a.primary:visited,
   margin-top: 6px;
 }
 
+/* Gives background color to selected filter */
+.smartbar-filters .tab-active {
+  background-color:  var(--main-admin-color) !important;
+}
+
+/* Better spacing for action bar filter buttons */
+.smartbar-filters .smartbar-actions {
+  margin-left: 10px;
+}
+
 .divider-toggle {
   position: relative;
   bottom: 4px;
@@ -113,6 +123,7 @@ a.primary:visited,
 /* Lighter color for smartbar active tab */
 .tab-active {
   background-color: var(--accent-admin-color) !important;
+  color: #4d4d4d !important;
 }
 
 /* Hides markitup header so users don't format embedded code. */
