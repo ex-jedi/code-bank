@@ -1,8 +1,5 @@
-## Directories not to deploy
+## Directories in Git repo which won't deploy to server
 sass/**
 scripts/js/**
 .htaccess
 .gitignore
-.scss-lint.yml
-gulpfile.js
-package.json
