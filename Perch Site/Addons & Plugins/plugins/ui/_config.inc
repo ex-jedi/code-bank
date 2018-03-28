@@ -1,6 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" href="/perch/addons/plugins/ui/admin.css" />
 
+<!--
 // UI Script to Add Collapsed Dividers in Perch Admin
 // Add this script to /perch/addons/plugins/ui/
 // Download Arrive.min.js and also put it in /perch/addons/plugins/ui/ .
@@ -9,9 +10,7 @@
 // will check if elements are already added to the Dom
 // GitHub https://github.com/uzairfarooq/arrive
 
-// TODO:
-// - Only hide empty field, not filled ones.
-// - Add CSS class, to be able to distinguish pre-collapsed fields via CSS
+-->
 
 
 <script type="text/javascript" src="/perch/addons/plugins/ui/arrive.min.js"></script>

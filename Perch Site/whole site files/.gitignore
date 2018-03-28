@@ -1,8 +1,10 @@
-prepros.cfg
-perch/resources/
-perch/config/shop.php
-shop/checkout.php
-node_modules/
-package.json
-prepros-6.config
+#package.json
+#gulpfile.js
 *.db
+
+#Perch Files
+perch/resources/
+perch/addons/apps/perch_blog/import_data/
+perch/config/config.php
+perch/core/lang/en-gb.txt
+perch/addons/apps/jw_activity_log/lang/en-gb.txt
