@@ -1,8 +1,7 @@
+#General Stuff
 #package.json
 #gulpfile.js
 #sass-lint.yml
-
-*.db
 
 #Perch Files
 perch/resources/

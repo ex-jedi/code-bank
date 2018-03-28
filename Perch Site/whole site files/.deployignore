@@ -2,7 +2,6 @@
 sass/**
 scripts/js/**
 .htaccess
-.deployignore
 .gitignore
 .scss-lint.yml
 package.json
