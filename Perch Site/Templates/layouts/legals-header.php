@@ -39,9 +39,9 @@ perch_page_attributes(array(
   <div class="site-wrapper legals-wrapper">
     <header class="main-header legals-header">
 				<?php perch_content('Header Title'); ?>
-				<nav class="main-nav legals-nav">
+				<div class="main-nav-wrapper legals-nav">
 					<?php perch_pages_navigation(array(
 								'hide-extensions' => true,
 						)); ?>
-				</nav>
+				</div>
     </header>

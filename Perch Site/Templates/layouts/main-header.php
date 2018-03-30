@@ -35,9 +35,9 @@
 		<?php perch_content('Google Noscript Tag'); ?>
 		<div itemscope itemtype="http://schema.org/LocalBusiness" class="site-wrapper <?php perch_page_attribute('wrapperClass', array('template' => 'bits.html'));?>">
 			<header class="main-header">
-				<nav class="main-nav">
+				<div class="main-nav-wrapper">
 					<?php perch_pages_navigation(array(
 							'hide-extensions' => true,
 					)); ?>
-				</nav>
+				</div>
 			</header>
