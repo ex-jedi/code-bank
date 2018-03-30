@@ -32,7 +32,8 @@
 <?php perch_content('Analytics'); ?>
 </head>
 	<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
-		<div itemscope itemtype="http://schema.org/LocalBusiness" class="wrapper <?php perch_page_attribute('wrapperClass', array('template' => 'bits.html'));?>">
+		<?php perch_content('Google Noscript Tag'); ?>
+		<div itemscope itemtype="http://schema.org/LocalBusiness" class="site-wrapper <?php perch_page_attribute('wrapperClass', array('template' => 'bits.html'));?>">
 			<header class="main-header">
 				<nav class="main-nav">
 					<?php perch_pages_navigation(array(

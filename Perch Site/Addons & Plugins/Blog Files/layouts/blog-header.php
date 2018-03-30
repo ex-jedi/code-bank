@@ -37,7 +37,7 @@
 	</head>
 	<body>
 		<?php perch_content('Google Noscript Tag'); ?>
-		<div class="wrapper blog-wrapper">
+		<div itemscope itemtype="http://schema.org/LocalBusiness" class="site-wrapper blog-wrapper>">
 			<header class="main-header blog-header">
 				<div class="header-inner">
 				<?php perch_content('Header Title'); ?>

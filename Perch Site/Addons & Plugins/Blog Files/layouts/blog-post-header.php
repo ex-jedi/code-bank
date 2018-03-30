@@ -22,7 +22,7 @@
 	</head>
 	<body>
 		<?php perch_content('Google Noscript Tag'); ?>
-	  <div class="wrapper blog-post-wrapper">
+	  <div class="site-wrapper blog-post-wrapper">
 	    <header class="main-header blog-header">
 				<div class="header-inner">
 					<?php perch_content('Header Title'); ?>

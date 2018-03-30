@@ -36,7 +36,7 @@ perch_page_attributes(array(
 
 </head>
 <body>
-  <div class="wrapper legals-wrapper">
+  <div class="site-wrapper legals-wrapper">
     <header class="main-header legals-header">
 				<?php perch_content('Header Title'); ?>
 				<nav class="main-nav legals-nav">

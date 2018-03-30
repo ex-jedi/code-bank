@@ -1,0 +1,40 @@
+<!-- Address details marked up with structured data -->
+<div class="footer-contact-div" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+
+    <span class="footer-address-span" itemprop="name">
+      <perch:content id="businessName" type="text" label="Business Name" required >
+    </span>
+
+    <span class="footer-address-span" itemprop="streetAddress">
+      <perch:content id="streetAddressOne" type="text" label="Street Address One" required>
+    </span>
+
+    <perch:if exists="streetAddressTwo">
+        <span class="footer-address-span" itemprop="streetAddress">
+          <perch:content id="streetAddressTwo" type="text" label="Street Address Two" >
+        </span>
+    </perch:if>
+
+    <span class="footer-address-span" itemprop="addressLocality">
+      <perch:content id="addressTown" type="text" label="Town" required>
+    </span>
+
+    <perch:if exists="addressCounty">
+      <span class="footer-address-span" itemprop="addressRegion">
+        <perch:content id="addressCounty" type="text" label="County" >
+      </span>
+    </perch:if>
+
+    <span class="footer-address-span" itemprop="postalCode">
+      <perch:content id="addressPostCode" type="text" label="Postcode" required>
+      </span>
+
+    <span class="footer-address-span footer-address-email" itemprop="email">
+      <perch:content id="addressEmail" type="text" label="Email Address" required>
+   </span>
+
+    <span class="footer-address-span footer-address-phone" itemprop="telephone">
+      <perch:content id="addressTelephone" type="text" label="Telephone Number" required>
+    </span>
+
+</div>
