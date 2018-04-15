@@ -11,7 +11,7 @@
 
 @mixin breakpoint($point) {
   @if $point == 2000 {
-    @media (max-width: 2000) { @content; }
+    @media (max-width: 2000px) { @content; }
   }
 }
 
