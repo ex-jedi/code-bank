@@ -1,0 +1,22 @@
+<h1 class="latest-episode-heading">Latest Podcast Episode</h1>
+<article class="blog-article blog-index-listing listing-first-in-set">
+  <h2 class="blog-index-listing-title">
+    <a class="blog-listing-index-link" href="<perch:blog id="postURL" />">
+      <perch:blog id="postTitle" />
+    </a>
+  </h2>
+    <div class="player-embed first-in-list-embed">
+      <perch:blog id="mainPlayer" html="true" />
+    </div>
+<div class="first-in-list-text-wrapper">
+  <div class="first-in-list-excerpt-div blog-listing-excerpt-div">
+    <perch:blog id="blog-index-excerpt" html="true" />
+    </div>
+  <p class="read-more-link-paragraph">
+      <a class="read-more-link" href="<perch:blog id="postURL" />">Show Notes</a>
+  </p>
+    <p class="blog-index-date-time">
+      <perch:blog id="postDateTime"  format="%d %B %Y" />
+    </p>
+</div>
+</article>

@@ -1,0 +1,44 @@
+<article class="blog-article blog-index-listing not-first-listing">
+<div class="blog-index-image-wrapper">
+    <img class="blog-index-listing-image" src="<perch:blog id="post_image" type="image" width="800"  />" alt="<perch:blog id="postTitle" />"
+    sizes="(max-width: 800px) 100vw, 30vw"
+    srcset="<perch:blog type="image" id="post_image" width="800" /> 800w,
+    <perch:blog type="image" id="post_image" width="600" /> 600w,
+    <perch:blog type="image" id="post_image" width="400" /> 400w,
+    <perch:blog type="image" id="post_image" width="200" /> 200w">
+</div>
+<div class="blog-index-text-wrapper">
+  <h2 class="blog-index-listing-title">
+    <a class="blog-listing-index-link" href="<perch:blog id="postURL" />">
+      <perch:blog id="postTitle" />
+    </a>
+  </h2>
+  <div class="blog-listing-excerpt-div">
+      <perch:blog id="blog-index-excerpt" html="true" />
+  </div>
+  <p class="read-more-link-paragraph">
+    <a class="read-more-link" href="<perch:blog id="postURL" />">Listen &amp; read show notes</a>
+  </p>
+  <p class="blog-index-date-time">
+    <perch:blog id="postDateTime"  format="%d %B %Y" />
+  </p>
+</article>
+<perch:after>
+    <perch:if exists="paging">
+        <div class="paging">
+            Page <perch:blog id="current_page" /> of <perch:blog id="number_of_pages" />
+            <perch:blog id="page_links" encode="false" />
+            <div class="paging-inner-div">
+                <perch:if exists="not_first_page">
+                        <a class="first-paging-link paging-link"  href="\">First</a>
+                </perch:if>
+                <perch:if exists="not_first_page">
+                    <a class="paging-link"  href="<perch:blog id="prev_url" encode="false" />">|&nbsp;Previous&nbsp;|</a>
+                </perch:if>
+                <perch:if exists="not_last_page">
+                    <a class="paging-link"  href="<perch:blog id="next_url" encode="false" />">Next</a>
+            </div>
+            </perch:if>
+        </div>
+    </perch:if>
+</perch:after>
