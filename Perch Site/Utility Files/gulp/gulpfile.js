@@ -37,7 +37,9 @@ gulp.task('compress', function () {
 
 gulp.task('browserSync', function() {
     browserSync.init({
-        proxy: 'XXXX'// TODO: Enter localhost
+        proxy: 'xxxx',
+        host: 'xxxx',
+        open: 'external'
     });
 });
 
