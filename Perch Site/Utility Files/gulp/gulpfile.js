@@ -41,7 +41,7 @@ gulp.task("compress", function() {
 
 gulp.task("browserSync", function() {
   browserSync.init({
-    proxy: "xxxx"
+    proxy: "breconminbreak.test"
   });
 });
 
