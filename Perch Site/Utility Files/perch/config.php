@@ -17,9 +17,27 @@
     define('PERCH_RESPATH', PERCH_LOGINPATH . '/resources');
 
     define('PERCH_HTML5', true);
-    define(' PERCH_PRODUCTION_MODE', 'PERCH_DEVELOPMENT');
 
+    // Options
+
+    // Environments
+    define(' PERCH_PRODUCTION_MODE', 'PERCH_DEVELOPMENT');
+    define(' PERCH_PRODUCTION_MODE', 'PERCH_STAGING');
+    define(' PERCH_PRODUCTION_MODE', 'PERCH_PRODUCTION');
+
+    // Security
+    define('PERCH_PARANOID', true);
+
+    define('PERCH_MAX_FAILED_LOGINS',	10);
+    define('PERCH_AUTH_LOCKOUT_DURATION',	'1 HOUR');
+    define('PERCH_STRONG_PASSWORDS', true);
+    define('PERCH_PASSWORD_MIN_LENGTH',	6);
+    define('PERCH_FORCE_SECURE_COOKIES', true);
+
+    // Editor
     define('PERCH_CUSTOM_EDITOR_CONFIGS', true);
+
+    // Debug
     define('PERCH_DEBUG', true);
 
     switch($http_host)
