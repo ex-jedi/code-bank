@@ -8,15 +8,15 @@
 	<link rel="stylesheet" href="<?php perch_page_attribute('css', array('template' => 'bits.html')) ;?>">
 	<!-- Perch Meta -->
 	<?php
-	$domain        = 'https://'.$_SERVER["HTTP_HOST"];// TODO: Check Protocol
+	$domain        = 'https://'.$_SERVER["HTTP_HOST"];
 	$mainurl           = perch_page_url(array(
 										    'hide-extensions'    => true,
 										    'hide-default-doc'   => true,
 										    'add-trailing-slash' => false,
 										    'include-domain'     => true,
 										), true);
-	$mainsitename      = "Site Name";
-	$pagetitlename = " - Site Name";
+	$mainsitename      = "SITE NAME";
+	$pagetitlename = " - SITE NAME";
 	$sharing_image = '/images/default_fb_image.jpg';
 
 	PerchSystem::set_var('domain',$domain);
@@ -33,7 +33,6 @@
 <?php perch_content('Analytics'); ?>
 </head>
 	<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
-		<?php perch_content('Google Noscript Tag'); ?>
 		<div itemscope itemtype="http://schema.org/LocalBusiness" class="site-wrapper <?php perch_page_attribute('wrapperClass', array('template' => 'bits.html'));?>">
 			<header class="main-header">
 				<div class="main-nav-wrapper">

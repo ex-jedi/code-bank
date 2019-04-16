@@ -1,0 +1,3 @@
+Copy and replace entire Perch addons folder.
+
+Also includes UI app. Not sure if this can be copied, or it it has to be added as a git submodule.

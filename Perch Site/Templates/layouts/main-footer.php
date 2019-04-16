@@ -14,6 +14,6 @@
 <!-- TODO: Check below for latest versions -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script><!-- Jquery CDN -->
 <script>window.jQuery || document.write('<script src="/scripts/minified/jquery-3.1.0.min.js"><\/script>')</script><!-- Jquery Backup -->
-<script type="text/javascript" src="/scripts/minified/universal-min.js"></script><!-- Local universal jQuery files -->
+<script type="text/javascript" src="/scripts/minified/universal-min.js"></script><!-- Local universal JS files -->
 </body>
 </html>

@@ -1,13 +1,10 @@
-<?php include('perch/runtime.php'); ?> <!-- Perch initialisation code -->
+<?php include('perch/runtime.php'); ?>
 <?php perch_layout('main-header'); ?>
-<main class="homepage-main-content">
+<main class="main-content homepage-main-content">
 	<h1>Hello World</h1>
-	<section class=" ">
-	<?php perch_content(' '); ?>
-	</section>
-	<section class=" ">
-		<?php perch_content(' '); ?>
+	<section>
+	  <?php perch_content('Placeholder'); ?>
 	</section>
 </main>
-<?php perch_layout(' '); ?>
-<?php PerchUtil::output_debug(); ?>
+<?php perch_layout('main-footer'); ?>
+<!-- <?php PerchUtil::output_debug(); ?> -->
