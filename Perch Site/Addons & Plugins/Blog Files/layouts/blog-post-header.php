@@ -19,6 +19,28 @@
 		<!-- Google Analytics -->
 		<?php perch_content('Analytics'); ?>
 
+		<!-- Cookie Consent -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+		<script>
+		window.addEventListener("load", function(){
+		window.cookieconsent.initialise({
+			"palette": {
+				"popup": {
+					"background": "#000"
+				},
+				"button": {
+					"background": "transparent",
+					"text": "#fff",
+					"border": "#fff"
+				}
+			},
+			"content": {
+				"href": "/privacy-and-cookie-policy"
+			}
+		})});
+		</script>
+
 	</head>
 	<body>
 		<?php perch_content('Google Noscript Tag'); ?>
