@@ -43,24 +43,24 @@
     switch($http_host)
 {
     case('relative-paths') :
-      define("PERCH_DB_USERNAME", 'local');
-      define("PERCH_DB_PASSWORD", 'roygbiv');
+      define("PERCH_DB_USERNAME", 'USERNAME');
+      define("PERCH_DB_PASSWORD", 'PASSWORD');
       define("PERCH_DB_SERVER", "localhost");
-      define("PERCH_DB_DATABASE", "relativepaths-local");
+      define("PERCH_DB_DATABASE", "DATABASE");
         break;
 
     case('dev.relativepaths.uk') :
-      define("PERCH_DB_USERNAME", 'relativ8_rp-main');
-      define("PERCH_DB_PASSWORD", 'k@dIPZZze%p55xr0elQ2iN*i%C@kfCD5%S^TYvoB');
+      define("PERCH_DB_USERNAME", 'USERNAME');
+      define("PERCH_DB_PASSWORD", 'PASSWORD');
       define("PERCH_DB_SERVER", "localhost");
-      define("PERCH_DB_DATABASE", "relativ8_rp-perch");
+      define("PERCH_DB_DATABASE", "DATABASE");
         break;
 
     default :
-        define("PERCH_DB_USERNAME", 'mysite_user');
-        define("PERCH_DB_PASSWORD", 'mysite_password');
+        define("PERCH_DB_USERNAME", 'USERNAME');
+        define("PERCH_DB_PASSWORD", 'PASSWORD');
         define("PERCH_DB_SERVER", "localhost");
-        define("PERCH_DB_DATABASE", "db-mysite");
+        define("PERCH_DB_DATABASE", "DATABASE");
         break;
     }
 
