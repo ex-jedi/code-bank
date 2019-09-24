@@ -1,7 +1,6 @@
 #General Stuff
-#package.json
-#gulpfile.js
-#sass-lint.yml
+node_modules
+
 
 #Perch Files
 perch/resources/
