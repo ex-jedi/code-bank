@@ -1,36 +1,12 @@
-// =======================================================================================
-// ** Colour, font stacks, media queries, that kind of thing.  **
-// =======================================================================================
+//*==============================================================================
+//** Colour, font stacks, media queries, that kind of thing  **
+//*==============================================================================
 
-// =========================================
-// ** Media Queries  **
-// =========================================
+//*=========================================
+//** Layout **
+//*=========================================
 
-@mixin breakpoint($point) {
-  @if $point == 2000 {
-    @media (max-width: 2000) { @content; }
-  }
-}
-
-//********** Alternative Media Queries**********
-
-
-@mixin breakpoint($point) {
-  @if unitless($point) {
-    $point: 1px * $point;
-  }
-  @media (max-width: $point) {
-    @content;
-  }
-}
-
-// =========================================
-// ** Mixins  **
-// =========================================
-
-//********** Layout **********
-
-//Main Grid Mixin
+//* Main Grid Mixin
 @mixin main-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -41,18 +17,20 @@
   grid-gap: $grid-gap;
 }
 
-//Flex Mixin
+//* Flex Mixin
 @mixin flex($direction) {
   display: flex;
   flex-direction: $direction;
 }
 
-//Layout Variables
+//* Layout Variables
 $grid-gap: 0 1rem;
 
-//********** Typography **********
+//*=========================================
+//** Typography **
+//*=========================================
 
-//Font Stacks
+//* Font Stacks
 @mixin heading-font-stack {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
@@ -63,29 +41,55 @@ $grid-gap: 0 1rem;
   font-weight: 300;
 }
 
-//********** Backgrounds **********
+//********** Sizing & spacing **********
 
-@mixin main-background {
-  // background-color: $white;
-  background-image: url("/images/white_wall_hash.png");
-}
+//* Headings
 
-//********** Animation Stagger **********
+//Sizing
+$h1-size: 2.5rem;
+$h2-size: 1.5rem;
+$h3-size: 1rem;
 
-@mixin stagger-anim-delay($elem, $initial-delay, $stagger-delay) {
-  @for $i from 1 through $elem {
-    &:nth-of-type(#{$i}) {
-      animation-delay: $initial-delay + $stagger-delay * $i;
-    }
-    $i: $i - 1;
-  }
-}
+//Spacing
+$h1-spacing-large: 5rem;
+$h1-spacing: 2.5rem;
+$h2-spacing: 1.5rem;
+$h3-spacing: 1rem;
 
-//********** Other Stuff **********
+//* Articles
+$article-spacing: 5rem;
 
-//Fancy Link Underline
+//* Sections
+$large-section-spacing: 5rem;
+$section-spacing: 3.5rem;
+$small-section-spacing: 1.5rem;
+
+//* Paragraphs
+
+//Font sizing
+$font-size-large: 3rem;
+$font-size: 1.5rem;
+$font-size-small: 1rem;
+
+//Spacing
+$large-paragraph-spacing: 3rem;
+$paragraph-spacing: 1.5rem;
+$smaller-paragraph-spacing: 1rem;
+$small-paragraph-spacing: 0.5rem;
+
+//* Forms
+
+//Sizing
+$input-font-size: $font-size-small;
+
+//Spacing
+$input-spacing: 1rem;
+
+//********** Links **********
+
+//* Fancy Link Underline
 @mixin link-underline($colour) {
-  transition: all $transition-duration;
+  transition: all $transition-one;
   border-bottom: 3px solid transparent;
   padding-bottom: 5px;
 
@@ -102,9 +106,9 @@ $grid-gap: 0 1rem;
   }
 }
 
-//Fancy Link Underline With Visited styles
+//* Fancy Link Underline With Visited styles
 @mixin link-underline-visited($colour) {
-  transition: all $transition-duration;
+  transition: all $transition-one;
   border-bottom: 3px solid transparent;
   padding-bottom: 5px;
 
@@ -134,133 +138,63 @@ $grid-gap: 0 1rem;
   }
 }
 
-// =========================================
-// ** Variables  **
-// =========================================
-
-//********** Colours **********
+//*=========================================
+//** Colours  **
+//*=========================================
 
 //Main brand Colours
-$badger-orange: #ea8a13;
-$badger-accent: #6a4d29;
-$link-visited: #00699d;
+$orange: #ea8a13;
+$accent: #6a4d29;
 
 //Main Font Colours
-$font-colour: #252525;
+$dark-font-colour: #252525;
 $light-font-colour: #f7f7f7;
-$link-colour: $badger-orange;
+$link-colour: #3c3cf6;
+$link-visited: #8608fb;
 
 //Background Colours
 $light-background-colour: #fff;
-$opaque-background-colour: rgba(255, 255, 255, 0.911);
-$translucent-background-colour: rgba(255, 255, 255, 0.726);
+$medium-background-colour: #817f7f;
+$dark-background-colour: #141414;
 
-$background-colour: #e9e9e9;
-$medium-background-colour: rgb(129, 127, 127);
-$medium-background-colour__transparent: rgba(129, 127, 127, 0.425);
-$dark-background-colour: #424141;
-$dark-background-colour__opaque: rgba(66, 65, 65, 0.726);
+//*=========================================
+//** Effects and Animation  **
+//*=========================================
+
+//********** Animation Stagger **********
+
+@mixin stagger-anim-delay($elem, $initial-delay, $stagger-delay) {
+  @for $i from 1 through $elem {
+    &:nth-of-type(#{$i}) {
+      animation-delay: $initial-delay + $stagger-delay * $i;
+    }
+    $i: $i - 1;
+  }
+}
 
 //********** Transition Timings**********
 
-$transition-duration: 0.3s ease-in-out 0s;
-$transition-duration-fast: 0.2s ease-in-out 0s;
-$transition-duration-slow: 0.8s ease-in-out 0s;
+$transition-one: 0.3s ease-in-out 0s;
 
-//********** Spacing & layout  **********
+//*=========================================
+//** Media Queries   **
+//*=========================================
 
-//Headings
-$large-h1-spacing: 5rem;
-$h1-spacing: 2.5rem;
-$h2-spacing: 1.5rem;
-$h3-spacing: 1rem;
-
-//Articles
-$main-spacing: 5rem;
-
-//Sections
-$large-section-spacing: 5rem;
-$section-spacing: 3.5rem;
-$small-section-spacing: 1.5rem;
-
-//Paragraphs
-$large-paragraph-spacing: 3rem;
-$paragraph-spacing: 1.5rem;
-$smaller-paragraph-spacing: 1rem;
-$small-paragraph-spacing: 0.5rem;
-$main-font-size: 1.25rem;
-
-//Forms
-$input-spacing: 1%;
-
-//Other Spacing
-
-// =========================================
-// ** Effects and Animation  **
-// =========================================
-@keyframes height-and-fade {
-  100% {
-    opacity: 0.9;
-    top: 0;
+@mixin breakpoint($point) {
+  @if unitless($point) {
+    $point: 1px * $point;
+  }
+  @media (max-width: $point) {
+    @content;
   }
 }
 
-@keyframes slider-text {
-  10%,
-  96% {
-    opacity: 1;
-    top: 0;
-  }
+//! Alternative Media Queries. You must Choose!
 
-  100% {
-    opacity: 0;
-    top: 0;
-  }
-}
-
-@keyframes scroll-reveal {
-  0% {
-    opacity: 0;
-    left: 50px;
-  }
-
-  100% {
-    opacity: 1;
-    left: 0;
-  }
-}
-
-@keyframes wiggle {
-  10% {
-    transform: rotateZ(-20deg);
-  }
-
-  20% {
-    transform: rotateZ(20deg);
-  }
-
-  30% {
-    transform: rotateZ(-15deg);
-  }
-
-  40% {
-    transform: rotateZ(15deg);
-  }
-
-  50% {
-    transform: rotateZ(-6deg);
-  }
-
-  60% {
-    transform: rotateZ(6deg);
-  }
-
-  80%,
-  100% {
-    transform: rotateZ(0);
-  }
-}
-
-// =========================================
-// ** Browser Quirks  **
-// =========================================
+// @mixin breakpoint($point) {
+//   @if $point == 2000 {
+//     @media (max-width: 2000) {
+//       @content;
+//     }
+//   }
+// }
