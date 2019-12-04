@@ -29,7 +29,6 @@ html {
   box-sizing: inherit;
 }
 
-
 // *=========================================
 // ** Content container and block **
 // *=========================================
@@ -52,6 +51,36 @@ html {
 // ** Header  **
 // *=========================================
 
+//*Skip to content link
+.show-on-focus {
+  position: absolute;
+  color: $dark-font-colour;
+  background-color: $light-background-colour;
+  padding: 10px;
+  font-size: $smaller-font-size;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0.5rem 0 0 0.5rem;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+
+  &:focus {
+    z-index: 20;
+    width: auto;
+    height: auto;
+    clip: auto;
+  }
+}
+
+//* Hides outline unless tab key is pressed
+
+.hide-outline {
+  .no-outline {
+    outline: none;
+  }
+}
 // *=========================================
 // ** Main Nav  **
 // *=========================================
