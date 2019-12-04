@@ -1,3 +1,5 @@
-Code Bank.
+# Code Bank
 
-Reporsitory for any code we intend to reuse in projects.
+Repository of code for reuse in projects. Includes Perch code.
+
+Feel free to have a look around
