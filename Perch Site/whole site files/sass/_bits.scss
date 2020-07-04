@@ -191,11 +191,25 @@ $transition-one: 0.3s ease-in-out 0s;
 //** Media Queries   **
 //*=========================================
 
-@mixin breakpoint($point) {
+//********** Width **********
+
+//TODO: Change snippets to match below
+@mixin width-breakpoint($point) {
   @if unitless($point) {
     $point: 1px * $point;
   }
   @media (max-width: $point) {
+    @content;
+  }
+}
+
+//********** Width and Orientation **********
+
+@mixin width-orientation-breakpoint($point, $orientation: portrait) {
+  @if unitless($point) {
+    $point: 1px * $point;
+  }
+  @media (max-height: $point) and (orientation: $orientation) {
     @content;
   }
 }
