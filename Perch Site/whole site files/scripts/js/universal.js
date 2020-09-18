@@ -1,40 +1,24 @@
-//Responsive menu
-$(function() {
-    var pull        = $('#pull');
-        menu        = $('.responsive-main-nav');
+// *=========================================
+// ** Cookie Warning  **
+// *=========================================
 
-    $(pull).on('click', function(e) {
-        e.preventDefault();
-        menu.slideToggle();
-        ($("#pull-span").text() === "HIDE\xa0") ? $("#pull-span").text("SHOW\xa0") : $("#pull-span").text("HIDE\xa0");
+const cookieBanner = document.querySelector('.cookie-warning-wrapper');
+const cookieWarningButton = document.querySelector('.cookie-warning-button');
+
+if (localStorage.getItem('cookieSeen') !== 'shown') {
+  cookieBanner.classList.add('show-cookie-warning');
+} else {
+  cookieBanner.style.display = 'none';
+}
+
+cookieWarningButton.addEventListener(
+  'click',
+  () => {
+    localStorage.setItem('cookieSeen', 'shown');
+    cookieBanner.classList.remove('show-cookie-warning');
+    cookieBanner.addEventListener('transitionend', () => {
+      cookieBanner.style.display = 'none';
     });
-});
-
-//Restores menu when screen is resized to larger than menu breakpoint, and preserves responsive menu state.
-$(window).resize(function(){
-    if(($("#pull").css("display") == "none" ) && menu.is(':hidden')) {
-        menu.removeAttr('style');
-    }
-});
-
-//Sticky Navigation
-
-
-
-$(window).scroll(function() {
-
-  var mainNav = $(".main-nav");
-  var legalsNav = $(".legals-nav");
-  var stickyNav = "sticky-nav";
-  var legalsStickyNav = "legals-sticky-nav";
-  var headerHeight = $('.main-header').height();
-
-  if( ($(this).scrollTop() > headerHeight) && ($("#pull").css("display") == "block" ) ) {
-    mainNav.addClass(stickyNav);
-    legalsNav.addClass(legalsStickyNav);
-
-  } else {
-    mainNav.removeClass(stickyNav);
-    legalsNav.removeClass(legalsStickyNav);
-  }
-});
+  },
+  { once: true }
+);
