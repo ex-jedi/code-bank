@@ -11,9 +11,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
-    "h h h h"
-    "m m m m"
-    "f f f f";
+    'h h h h'
+    'm m m m'
+    'f f f f';
   grid-gap: $grid-gap;
 }
 
@@ -32,12 +32,12 @@ $grid-gap: 0 1rem;
 
 //* Font Stacks
 @mixin main-font-stack {
-  font-family: "baskerville-poster-pt", serif;
+  font-family: 'baskerville-poster-pt', serif;
   font-weight: 400;
 }
 
 @mixin utility-font-stack {
-  font-family: "calluna-sans", sans-serif;
+  font-family: 'calluna-sans', sans-serif;
   font-weight: 400;
 }
 
@@ -191,14 +191,41 @@ $transition-one: 0.3s ease-in-out 0s;
 //** Media Queries   **
 //*=========================================
 
-//********** Width **********
+//*=========================================
+//** Media Queries   **
+//*=========================================
 
-//TODO: Change snippets to match below
-@mixin width-breakpoint($point) {
+//TODO: Delete unused media query's
+
+//********** Max Width **********
+
+@mixin breakpoint($point) {
   @if unitless($point) {
     $point: 1px * $point;
   }
   @media (max-width: $point) {
+    @content;
+  }
+}
+
+//********** Min Width **********
+
+@mixin breakpoint-min($point) {
+  @if unitless($point) {
+    $point: 1px * $point;
+  }
+  @media (min-width: $point) {
+    @content;
+  }
+}
+
+//********** Height **********
+
+@mixin height-breakpoint($point) {
+  @if unitless($point) {
+    $point: 1px * $point;
+  }
+  @media (max-height: $point) {
     @content;
   }
 }
@@ -213,14 +240,3 @@ $transition-one: 0.3s ease-in-out 0s;
     @content;
   }
 }
-
-//* Alternative Media Queries
-//TODO: You must Choose!
-
-// @mixin breakpoint($point) {
-//   @if $point == 2000 {
-//     @media (max-width: 2000) {
-//       @content;
-//     }
-//   }
-// }
