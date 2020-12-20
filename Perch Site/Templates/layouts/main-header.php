@@ -17,7 +17,7 @@
 										), true);
 	$mainsitename      = "SITE NAME";
 	$pagetitlename = " - SITE NAME";
-	$sharing_image = '/images/default-sharing-image.jpg>';
+	$sharing_image = '/images/default-sharing-image.jpg';
 
 	PerchSystem::set_var('domain',$domain);
 	PerchSystem::set_var('mainurl',$mainurl);
