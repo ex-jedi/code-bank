@@ -15,7 +15,7 @@
         </span>
     </perch:if>
 
-    <span class="footer-address-span" itemprop="addressLocality">
+    <span class="footer-address-span" itemprop="addressLocality areaServed">
       <perch:content id="addressTown" type="text" label="Town" required>
     </span>
 
@@ -34,7 +34,8 @@
    </span>
 
     <span class="footer-address-span footer-address-phone" itemprop="telephone">
-      <perch:content id="addressTelephone" type="text" label="Telephone Number" required>
+      <a href="tel:<perch:content id="addressTelephone" type="text" label="Telephone Number" required>">
+        <perch:content id="addressTelephone">
+      </a>
     </span>
-
 </div>
