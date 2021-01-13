@@ -6,13 +6,12 @@
 import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
 // *=========================================
 // ** GSAP  **
 // *=========================================
 
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
+gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
 
 // *=========================================
 // ** Main Nav  **
@@ -164,13 +163,8 @@ function scrollColourChange() {
 // ** Homepage  **
 // *==============================================================================
 
-
 // *=========================================
 // ** Exports  **
 // *=========================================
 
-export {
-  menuOpenerHandler,
-  mainNavTrigger,
-  scrollColourChange
-};
+export { menuOpenerHandler, mainNavTrigger, scrollColourChange };

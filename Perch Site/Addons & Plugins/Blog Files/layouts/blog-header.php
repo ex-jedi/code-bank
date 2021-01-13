@@ -17,15 +17,14 @@
 		));
 
 		?>
-		<!-- Google Analytics -->
-		<?php perch_content('Analytics'); ?>
-
-	<!-- Cookie Warning -->
-	<!-- TODO: Move to footer -->
-	<?php perch_content("Cookie Warning"); ?>
 
 
 </head>
+<!-- Google Analytics -->
+<?php perch_content('Analytics'); ?>
+
+<!-- Cookie Warning -->
+<?php perch_content("Cookie Warning"); ?>
 	<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
 				<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
 			<header class="main-header">

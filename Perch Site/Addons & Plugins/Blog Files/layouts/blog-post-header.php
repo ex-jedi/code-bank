@@ -14,14 +14,13 @@
 		));
 
 		?>
-		<!-- Google Analytics -->
-		<?php perch_content('Analytics'); ?>
+
+</head>
+<!-- Google Analytics -->
+<?php perch_content('Analytics'); ?>
 
 <!-- Cookie Warning -->
-<!-- TODO: Move to footer -->
 <?php perch_content("Cookie Warning"); ?>
-
-	</head>
 	<body>
 	  <div class="site-wrapper blog-post-wrapper">
 	    <header class="main-header blog-header">
