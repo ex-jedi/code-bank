@@ -1,5 +1,0 @@
-## Directories in Git repo which won't deploy to server
-sass/**
-scripts/js/**
-.htaccess
-.gitignore
