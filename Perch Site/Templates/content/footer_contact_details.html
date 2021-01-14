@@ -34,8 +34,8 @@
    </span>
 
     <span class="footer-address-span footer-address-phone" itemprop="telephone">
-      <a href="tel:<perch:content id="addressTelephone" type="text" label="Telephone Number" required>">
-        <perch:content id="addressTelephone">
+      <a itemprop="telephone" href="<perch:content id="addressTelephone" filter="phone" output="tel_link" label="Phone Number">">
+      Tel: <perch:content id="addressTelephone" filter="phone" output="national">
       </a>
     </span>
 </div>
