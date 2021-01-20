@@ -1,6 +1,6 @@
 <?php include('../perch/runtime.php'); ?>
 <?php perch_layout('blog-header'); ?>
-<main class="blog-main-content archive-main-content">
+<main class="blog-main-content archive-main-content" id="main-content">
 
 		    <?php
 		        // defaults for all modes
