@@ -19,6 +19,7 @@ html {
   -webkit-tap-highlight-color: transparent;
   font-size: 10px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 // * Box sizing rules
@@ -28,6 +29,14 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0 auto;
+  position: relative;
+  min-width: 320px;
+  max-width: 1920px;
+  overflow-x: hidden;
+}
+
 // *=========================================
 // ** Content container and block **
 // *=========================================
@@ -35,6 +44,10 @@ html {
 //********** Headings**********
 
 //********** Containers **********
+
+section {
+  overflow: hidden;
+}
 
 //********** Paragraphs **********
 
@@ -52,9 +65,22 @@ img {
 
 //********** Links **********
 
+// Better to leave underlining on by default and switch it off where you don't want it
+
+a {
+  text-decoration: underline;
+  color: $link-colour;
+}
+
 // *=========================================
 // ** Main Nav  **
 // *=========================================
+
+.main-nav-trigger-wrapper {
+  display: none;
+}
+
+//********** Responsive Styles **********
 
 // *=========================================
 // ** Body **
@@ -75,10 +101,15 @@ select {
 //********** Honeypot **********
 
 .form-identification-number {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
   overflow: hidden;
+  padding: 0;
   position: absolute;
-  z-index: -10;
-  opacity: 0;
+  width: 1px;
+  white-space: nowrap;
 }
 
 // *=========================================
