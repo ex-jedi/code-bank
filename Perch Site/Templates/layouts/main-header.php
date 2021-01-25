@@ -30,9 +30,9 @@
 	));
 	?>
 
-</head>
 <!-- Google Analytics -->
 <?php perch_content('Analytics'); ?>
+</head>
 
 <!-- Cookie Warning -->
 <?php perch_content("Cookie Warning"); ?>
