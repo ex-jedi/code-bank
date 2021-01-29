@@ -25,12 +25,6 @@
 </div>
 </footer>
 </div> <!-- wrapper div -->
-<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script><!-- Jquery CDN -->
-<script>window.jQuery || document.write('<script src="scripts/minified/jquery-3.1.0.min.js"><\/script>')</script><!-- Jquery Backup -->
-<script type="text/javascript" src="/scripts/minified/universal-min.js"></script><!-- Local universal jQuery files -->
-<script type="text/javascript" src="/scripts/minified/blog-post-min.js"></script><!-- Blog jQuery files -->
-<script type="text/javascript" src="/scripts/minified/instafeed.js"></script><!-- Instafeed jQuery files -->
-<!-- Share This -->
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=58c0064040bc28001149e63e&product=inline-share-buttons"></script>
+<script  src="/scripts/minified/main-min.js"></script>
 </body>
 </html>
