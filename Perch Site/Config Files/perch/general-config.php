@@ -21,5 +21,17 @@
 
     define('PERCH_HTML5', true);
 
+    define('PERCH_CUSTOM_EDITOR_CONFIGS', true);
+
+    define('PERCH_EMAIL_METHOD', 'smtp');
+    define('PERCH_EMAIL_HOST', 'smtp.gmail.com');
+    define('PERCH_EMAIL_AUTH', true);
+    define('PERCH_EMAIL_SECURE', 'ssl');
+    define('PERCH_EMAIL_PORT', 465);
+    define('PERCH_EMAIL_USERNAME', 'your.name@gmail.com');
+    define('PERCH_EMAIL_PASSWORD', 'your gmail password');
+
     define('PERCH_TEMPLATE_FILTERS', true);
     define('PIPIT_PHONE_COUNTRY', 'GB');
+
+
