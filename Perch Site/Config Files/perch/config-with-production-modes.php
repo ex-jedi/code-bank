@@ -21,9 +21,9 @@
     // Options
 
     // Environments
-    define(' PERCH_PRODUCTION_MODE', 'PERCH_DEVELOPMENT');
-    define(' PERCH_PRODUCTION_MODE', 'PERCH_STAGING');
-    define(' PERCH_PRODUCTION_MODE', 'PERCH_PRODUCTION');
+    define(' PERCH_PRODUCTION_MODE', PERCH_DEVELOPMENT);
+    define(' PERCH_PRODUCTION_MODE', PERCH_STAGING);
+    define(' PERCH_PRODUCTION_MODE', PERCH_PRODUCTION);
 
     // Security
     define('PERCH_PARANOID', true);

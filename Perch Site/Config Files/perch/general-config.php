@@ -34,4 +34,7 @@
     define('PERCH_TEMPLATE_FILTERS', true);
     define('PIPIT_PHONE_COUNTRY', 'GB');
 
-
+  // Environments
+    // define('PERCH_PRODUCTION_MODE', 'PERCH_DEVELOPMENT');
+    // define('PERCH_PRODUCTION_MODE', 'PERCH_STAGING');
+    define('PERCH_PRODUCTION_MODE', 'PERCH_PRODUCTION');
