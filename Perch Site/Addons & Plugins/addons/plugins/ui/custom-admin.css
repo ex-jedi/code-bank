@@ -2,11 +2,11 @@
 body {
   /* GROUP VARIABLES -- DECORATION -- COLOURS -- THEME
     =================================================== */
-  --colour-main: #6c9184;
-  --colour-main-hover: #424242;
-  --admin-colour-one: #bebebe;
+  --colour-main: hsl(46, 37%, 51%);
+  --colour-main-hover: hsl(0, 0%, 26%);
+  --admin-colour-one: hsl(0, 0%, 75%);
   --admin-colour-two: rgb(253, 253, 253);
-  --admin-color-dark: hsl(255, 15%, 50%);
+  --admin-color-dark: hsl(234, 37%, 51%);
   --font-color-light: hsl(15, 15%, 95%);
 
   /* GROUP VARIABLES -- DECORATION -- TEXT
@@ -116,4 +116,12 @@ label[for='postTags'] {
 label[for='postAllowComments'],
 label[for='postAllowComments'] ~ .form-entry {
   display: none;
+}
+
+/* Custom redactor styles */
+/* Gold Subheading */
+.h3-gold-subheading {
+  color: #b09b53 !important;
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
 }
