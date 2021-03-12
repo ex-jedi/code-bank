@@ -8,7 +8,7 @@
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
 // *=========================================
-// ** Wrappers **
+// ** Page & Site Wrappers **
 // *=========================================
 
 html {
@@ -45,8 +45,16 @@ body {
 
 //********** Containers **********
 
-section {
+section,
+main {
+  position: relative;
   overflow: hidden;
+  z-index: 3;
+  /*
+  * Fixes IOS Bug where scrolling breaks z-index
+  https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
+  */
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 //********** Paragraphs **********
