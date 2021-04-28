@@ -11,8 +11,8 @@ body {
 
   /* GROUP VARIABLES -- DECORATION -- TEXT
     =================================================== */
-  --font-family-main: 'Roboto', Arial, sans-serif;
-  --font-family-headline: 'Montserrat', Arial, sans-serif;
+  --font-family-main: "Roboto", Arial, sans-serif;
+  --font-family-headline: "Montserrat", Arial, sans-serif;
   /* GROUP VARIABLES -- DECORATION -- TEXT -- WEIGHTS
     =================================================== */
   --font-family-main-weight-normal: 400;
@@ -107,21 +107,37 @@ div.markItUpHeader {
 /* Hiding tags from Post meta admin  */
 input#postTags,
 input#postTags,
-label[for='postTags'] ~ span.inline-help,
-label[for='postTags'] {
+label[for="postTags"] ~ span.inline-help,
+label[for="postTags"] {
   display: none;
 }
 
 /* Hiding allow Comments checkbox and title from Post meta admin  */
-label[for='postAllowComments'],
-label[for='postAllowComments'] ~ .form-entry {
+label[for="postAllowComments"],
+label[for="postAllowComments"] ~ .form-entry {
   display: none;
 }
 
+/* Reducung native h3 size   */
+h3 {
+  font-size: 1.1rem !important;
+}
+
 /* Custom redactor styles */
+
 /* Gold Subheading */
 .h3-gold-subheading {
   color: #b09b53 !important;
   font-weight: bold !important;
-  font-size: 1.1rem !important;
+}
+
+/* Split Text Animations */
+
+.split-text-heading-animation::after {
+  content: "* split text";
+  font-size: 50%;
+  margin-left: 10px;
+  padding: 1px;
+  /* position: absolute; */
+  color: #00f;
 }
