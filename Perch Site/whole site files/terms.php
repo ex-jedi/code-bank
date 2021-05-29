@@ -6,3 +6,6 @@
 </main>
 <?php perch_layout('main-footer'); ?>
 <?php perch_layout('main-footer-end'); ?>
+<!-- TODO: Remove debug -->
+<!-- <?php PerchUtil::output_debug(); ?> -->
+<!-- TODO: Validate HTML -->

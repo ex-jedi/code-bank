@@ -8,4 +8,5 @@
 <?php perch_layout('error-page-footer-end'); ?>
 <!-- TODO: Remove debug -->
 <!-- <?php PerchUtil::output_debug(); ?> -->
+<!-- TODO: Validate HTML -->
 
