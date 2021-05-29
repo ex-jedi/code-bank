@@ -194,6 +194,7 @@ body:not(.user-is-tabbing) textarea:focus {
   width: 100%;
   padding: 1rem;
   font-size: 30px;
+  //TODO: Add variables for cookie warning colour
   background-color: #fff;
   opacity: 0;
   z-index: 10;
@@ -209,15 +210,18 @@ body:not(.user-is-tabbing) textarea:focus {
 }
 
 .cookie-warning-paragraph {
+  //TODO: Add variables for cookie warning spacing
   margin: 0 $section-spacing-small 0 0;
   color: #000;
 
   @include breakpoint(1300) {
+    //TODO: Add variables for cookie warning spacing
     margin: 0 $paragraph-spacing-small 0 0;
   }
 
   @include breakpoint(850) {
     text-align: center;
+    //TODO: Add variables for cookie warning spacing
     margin: 0 0 $paragraph-spacing-small;
   }
 }
@@ -228,6 +232,8 @@ body:not(.user-is-tabbing) textarea:focus {
 }
 
 .cookie-warning-button {
+  //TODO: Add variables for cookie warning spacing & colour
+
   background-color: transparent;
   border: 2px solid #000;
   color: #000;
