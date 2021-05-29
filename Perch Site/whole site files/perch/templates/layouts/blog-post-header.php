@@ -7,7 +7,6 @@
 		<link rel="stylesheet" href="/css/blog.css?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/css/blog.css');?>">
 
 		<!-- Typekit  -->
-		<link rel="stylesheet" href="https://use.typekit.net/fmp5gzf.css">
 
 		<!-- Perch Meta -->
 	 	<?php perch_blog_post_meta(perch_get('s'));
