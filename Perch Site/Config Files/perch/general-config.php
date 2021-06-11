@@ -31,8 +31,11 @@
     define('PERCH_EMAIL_USERNAME', 'your.name@gmail.com');
     define('PERCH_EMAIL_PASSWORD', 'your gmail password');
 
-    define('PERCH_TEMPLATE_FILTERS', true);
-    define('PIPIT_PHONE_COUNTRY', 'GB');
+    define('PERCH_PARANOID', true);
+    define('PERCH_VERIFY_UPLOADS', false);
+
+    //define('PERCH_TEMPLATE_FILTERS', true);
+    //define('PIPIT_PHONE_COUNTRY', 'GB');
 
   // Environments
     // define('PERCH_PRODUCTION_MODE', 'PERCH_DEVELOPMENT');
