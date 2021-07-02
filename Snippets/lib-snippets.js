@@ -4,7 +4,10 @@
 
 // ********** Installation **********
 
+// Main
 // https://flickity.metafizzy.co/extras.html#module-loaders
+
+// Images loaded. For properly sizing images after loading
 // https://flickity.metafizzy.co/extras.html#module-loaders
 
 

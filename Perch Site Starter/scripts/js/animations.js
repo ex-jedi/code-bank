@@ -1,3 +1,6 @@
+// To install GSAP with plugins - npm install gsap@npm:@gsap/shockingly
+// https://greensock.com/profile/75370-ex-jedi/content/?do=dashboard
+
 // *==============================================================================
 // ** Imports  **
 // *==============================================================================
