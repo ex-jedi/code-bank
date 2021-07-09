@@ -1,11 +1,14 @@
 <?php include('../perch/runtime.php'); ?>
-<?php perch_layout('gallery-album-header'); ?>
-<main class="main-content album-main-content">
+<?php perch_layout('gallery-page-header'); ?>
+<main id="main-content" class="main-content album-main-content">
+<section class="gallery-album-section">
     <?php
     if(perch_get('s')) {
       perch_gallery_album_images(perch_get('s'), array(
-               'template'   =>'gallery-page.html'
+               'template'   =>'gallery_page.html'
             ));
     } ?>
+</section>
 </main>
-<?php perch_layout('gallery-footer'); ?>
+<?php perch_layout('empty-footer'); ?>
+<?php perch_layout('gallery-album-end'); ?>
