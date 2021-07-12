@@ -14,6 +14,6 @@
 		perch_page_attributes(array(
 			'template' => 'favicons.html'
 		));
-
 		?>
+		<?php perch_content("Analytics"); ?>
 <!-- Head end tag in relevant header file -->

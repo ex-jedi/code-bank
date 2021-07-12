@@ -41,3 +41,4 @@
     // define('PERCH_PRODUCTION_MODE', 'PERCH_DEVELOPMENT');
     // define('PERCH_PRODUCTION_MODE', 'PERCH_STAGING');
     define('PERCH_PRODUCTION_MODE', 'PERCH_PRODUCTION');
+    // define('PERCH_DEBUG', true );
