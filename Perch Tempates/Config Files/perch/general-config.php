@@ -24,7 +24,7 @@
     define('PERCH_CUSTOM_EDITOR_CONFIGS', true);
 
     define('PERCH_EMAIL_METHOD', 'smtp');
-    define('PERCH_EMAIL_HOST', 'smtp.gmail.com');
+    define('PERCH_EMAIL_HOST', 'oscar.cloudns.io');
     define('PERCH_EMAIL_AUTH', true);
     define('PERCH_EMAIL_SECURE', 'ssl');
     define('PERCH_EMAIL_PORT', 465);
