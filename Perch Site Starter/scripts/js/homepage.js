@@ -2,6 +2,7 @@
 // ** Imports  **
 // *==============================================================================
 
+// TODO: Remove GSAP imports
 import * as Flickity from 'flickity';
 import 'flickity-imagesloaded';
 import { homepageParallax } from './animations';
