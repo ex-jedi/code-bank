@@ -45,6 +45,7 @@ main {
   position: relative;
   overflow: hidden;
   z-index: 3;
+  //TODO: Remove if not needed
   /*
   * Fixes IOS Bug where scrolling breaks z-index
   https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
@@ -53,6 +54,11 @@ main {
 }
 
 //********** Paragraphs **********
+
+p {
+  margin-inline: auto;
+  margin-top: 0;
+}
 
 // *=========================================
 // ** Inline **
