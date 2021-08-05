@@ -1,3 +1,4 @@
+<!-- TODO: Delete blog files if there's no blog -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
