@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="/css/blog.css">
 
 		<!-- Typekit -->
-		<link rel="stylesheet" href="https://use.typekit.net/ytg3fuz.css">
+
 
 		<!-- Perch Meta -->
 	 	<?php perch_blog_post_meta(perch_get('s'));
