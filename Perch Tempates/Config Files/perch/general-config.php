@@ -1,10 +1,10 @@
 <?php
-    define('PERCH_LICENSE_KEY', 'P21602-RYY608-BHZ161-RLB241-LVV027');
+    define('PERCH_LICENSE_KEY', 'XXXX');
 
     define("PERCH_DB_USERNAME", 'master_control');
     define("PERCH_DB_PASSWORD", 'roygbiv');
     define("PERCH_DB_SERVER", "localhost");
-    define("PERCH_DB_DATABASE", "newworld_local");
+    define("PERCH_DB_DATABASE", "XXXX");
     define("PERCH_DB_PREFIX", "perch3_");
 
     define('PERCH_TZ', 'UTC');
