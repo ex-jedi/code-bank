@@ -3,9 +3,32 @@
 // ** Reset based on https://hankchizljaw.com/wrote/a-modern-css-reset/  **
 // *=======================================================================================
 
-//********** Imports **********
+// *=======================================================================================
+// ** Imports & Mixins  **
+// *=======================================================================================
+
+//*=========================================
+//** Imports **
+//*=========================================
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Mixins **
+//*=========================================
+
+// Bottom spacing
+@mixin bottom-spacing {
+  margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
+}
 
 // *=========================================
 // ** Page & Site Wrappers **
@@ -197,6 +220,14 @@ body:not(.user-is-tabbing) textarea:focus {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+//********** Perch Debug **********
+//TODO: Remove debug styles
+
+html body table.perch-debug td,
+html body table.perch-debug th {
+  font-size: 20px !important;
 }
 
 //*=========================================

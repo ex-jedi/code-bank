@@ -1,11 +1,27 @@
 // *=======================================================================================
-// ** Homepage styles  **
+// ** Imports & Mixins  **
 // *=======================================================================================
 
-//********** Imports **********
+//*=========================================
+//** Imports **
+//*=========================================
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
-// *=========================================
-// ** Page & Site Wrappers **
-// *=========================================
+//*=========================================
+//** Mixins **
+//*=========================================
+
+//********** Bottom spacing **********
+
+@mixin bottom-spacing {
+  margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
+}
