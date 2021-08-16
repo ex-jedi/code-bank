@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="/css/main.css?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/css/main.css');?>">
 	<link rel="stylesheet" href="/css/blog.css?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/css/blog.css');?>">
-	<!-- Typekit  -->
-	<link rel="stylesheet" href="https://use.typekit.net/qpt3ahb.css">
+	<!-- Typekit -->
+	<!-- TODO: Typekit link goes here. Delete/change as needed.  -->
 	<!-- Perch Meta -->
 	<?php
 	$domain = 'https://'.$_SERVER["HTTP_HOST"];
@@ -29,5 +29,6 @@
 		'template' => 'blog_index.html'
 	));
 	?>
+	<!-- TODO: Delete if no analytics -->
 	<?php perch_content("Analytics"); ?>
   <!-- Head end tag in relevant header file  -->

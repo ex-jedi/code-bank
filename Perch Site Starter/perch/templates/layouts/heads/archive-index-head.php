@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="/css/main.css?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/css/main.css');?>">
 	<link rel="stylesheet" href="/css/blog.css?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/css/blog.css');?>">
-	<!-- Typekit  -->
-	<link rel="stylesheet" href="https://use.typekit.net/qpt3ahb.css">
+	<!-- Typekit -->
+	<!-- TODO: Typekit link goes here. Delete/change as needed.  -->
 	<!-- Perch Meta -->
 	<?php
 	$domain = 'https://'.$_SERVER["HTTP_HOST"];
@@ -16,8 +16,8 @@
 											'add-trailing-slash' => false,
 											'include-domain'     => true,
 									), true);
-	$mainsitename      = "Ruska";
-	$pagetitlename = " - Ruska";
+	$mainsitename      = "XXXX";
+	$pagetitlename = " - XXXX";
 	$sharing_image = '/images/default-sharing-image.png';
 	$cat_title = perch_blog_category(perch_get('cat'), true);
 
@@ -31,6 +31,7 @@
 		'template' => 'blog_archive/blog_archive.html'
 	));
 	?>
+	<!-- TODO: Delete if no analytics -->
 	<?php perch_content("Analytics"); ?>
 
   <!-- Head end tag in relevant header file  -->

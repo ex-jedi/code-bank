@@ -4,21 +4,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="/css/main.css?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/css/main.css');?>">
-	<?php $page_css_file	=  perch_page_attribute('css', array('template' => 'bits.html'), true); ?>
+	<?php $page_css_file	=  perch_page_attribute('css', array('template' => 'attribute_files/bits.html'), true); ?>
 	<link rel="stylesheet" href="<?php echo $page_css_file ?>?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].$page_css_file);?>">
-	<!-- Typekit  -->
+	<!-- Typekit -->
+	<!-- TODO: Typekit link goes here. Delete/change as needed.  -->
 	<!-- Perch Meta -->
 	<?php
-	$domain        = 'https://'.$_SERVER["HTTP_HOST"];
+	$domain = 'https://'.$_SERVER["HTTP_HOST"];
 	$mainurl           = perch_page_url(array(
-										    'hide-extensions'    => true,
-										    'hide-default-doc'   => true,
-										    'add-trailing-slash' => false,
-										    'include-domain'     => true,
-										), true);
+											'hide-extensions'    => true,
+											'hide-default-doc'   => true,
+											'add-trailing-slash' => false,
+											'include-domain'     => true,
+									), true);
 	$mainsitename      = "XXXX";
 	$pagetitlename = " - XXXX";
-	$sharing_image = '/images/default-sharing-image.jpg';
+	$sharing_image = '/images/default-sharing-image.png';
 
 	PerchSystem::set_var('domain',$domain);
 	PerchSystem::set_var('mainurl',$mainurl);
@@ -31,4 +32,4 @@
 	));
 	?>
 	<?php perch_content("Analytics"); ?>
-<!-- Head end tag in relevant header file  -->
+  <!-- Head end tag in relevant header file  -->
