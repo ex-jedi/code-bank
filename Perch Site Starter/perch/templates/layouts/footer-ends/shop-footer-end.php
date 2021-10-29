@@ -1,3 +1,4 @@
+<!-- TODO: Delete if not using -->
 <!-- JS file -->
 <script src="/scripts/minified/shop-min.js?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/scripts/minified/shop-min.js');?>"></script>
 <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
