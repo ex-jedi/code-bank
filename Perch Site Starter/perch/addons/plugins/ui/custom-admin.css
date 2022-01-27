@@ -126,3 +126,8 @@ label[for='postAllowComments'],
 label[for='postAllowComments'] ~ .form-entry {
   display: none;
 }
+
+/* Hiding help button */
+a[href="/perch/core/help/"] {
+  display: none;
+}
