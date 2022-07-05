@@ -1,0 +1,219 @@
+{
+  /*
+	// Place your snippets for HTML here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for place holders. Place holders with the
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+  "Class": {
+    "prefix": "class",
+    "body": ["class=\"$1\"$2"],
+    "description": "Class"
+  },
+  "ID": {
+    "prefix": "id",
+    "body": ["id=\"$1\"$2"],
+    "description": "ID"
+  },
+  "Type": {
+    "prefix": "type",
+    "body": ["type=\"$1\"$2"],
+    "description": "type"
+  },
+  "Label": {
+    "prefix": "label",
+    "body": ["label=\"$1\"$2"],
+    "description": "label"
+  },
+  "Help": {
+    "prefix": "help",
+    "body": ["help=\"$1\"$2"],
+    "description": "Help"
+  },
+  "Lazy": {
+    "prefix": "lazy",
+    "body": ["loading=\"lazy\""],
+    "description": "Lazy Loading"
+  },
+  "Icon": {
+    "prefix": "icon",
+    "body": ["icon=\"$1\"$2"],
+    "description": "Help"
+  },
+  "Divider Before": {
+    "prefix": "divider",
+    "body": ["divider-before=\"$1\"$2"],
+    "description": "Divider"
+  },
+  "Perch Content": {
+    "prefix": "perchc",
+    "body": [
+      "<perch:content id=\"$1\" type=\"$2\" label=\"$3\" ${4:required} ${5:html}>$6"
+    ],
+    "description": "Perch Content"
+  },
+  "Editor": {
+    "prefix": "editor",
+    "body": ["editor=\"${1:redactor}\"$2"],
+    "description": "Class"
+  },
+  "Perch Show All": {
+    "prefix": "perchall",
+    "body": ["<div class=\"show-all\">", "<perch:showall />", "</div>"],
+    "description": "Class"
+  },
+  "Perch If": {
+    "prefix": "perchif",
+    "body": ["<perch:if exists=\"$1\">", "\t$2", "</perch:if>", "$3"],
+    "description": "Perch If"
+  },
+  "Perch Before": {
+    "prefix": "perchb",
+    "body": ["<perch:before>", "\t$1", "</perch:before>", "$2"],
+    "description": "Class"
+  },
+  "Perch After": {
+    "prefix": "percha",
+    "body": ["<perch:after>", "\t$1", "</perch:after>", "$2"],
+    "description": "Perch After"
+  },
+  "Perch Field Group": {
+    "prefix": "perchgroup",
+    "body": ["<perch:group label=\"$1\">", "\t$2", "</perch:group>", "$3"],
+    "description": "Perch Field Group"
+  },
+  "Perch Template Include": {
+    "prefix": "perchtemplate",
+    "body": ["<perch:template path=\"$1\">$2"],
+    "description": "Perch Template Include"
+  },
+  "Perch Blocks": {
+    "prefix": "perchblocks",
+    "body": [
+      "<perch:blocks>",
+      "\t<perch:block type=\"$1\" label=\"$2\" icon=\"$3\">",
+      "\t\t$4",
+      "\t</perch:block>",
+      "</perch:blocks>"
+    ],
+    "description": "Perch Blocks"
+  },
+  "Perch Block": {
+    "prefix": "perchb",
+    "body": [
+      "<perch:block type=\"$1\" label=\"$2\" icon=\"$3\">",
+      "\t$4",
+      "</perch:block>"
+    ],
+    "description": "Perch Block"
+  },
+  "Perch Repeater": {
+    "prefix": "perchrepeat",
+    "body": [
+      "<perch:repeater id=\"$1\" label=\"$2\">",
+      "\t$3",
+      "</perch:repeater>",
+      "$4"
+    ],
+    "description": "Perch Repeater"
+  },
+  "Perch Image": {
+    "prefix": "perchrimg",
+    "body": [
+      "<img class=\"$1\" itemprop=\"image\" loading=\"lazy\" src=\"<perch:$2 id=\"$3\" type=\"image\" width=\"$4\" label=\"$5\">\" alt=\"<perch:$2 id=\"altOne\" type=\"text\" label=\"Image Description\">\"",
+      "sizes=\"(max-width: $6px) $7vw, $8vw\"",
+      "srcset=\"<perch:$2 type=\"image\" id=\"$3\" width=\"$9\"> $9w,",
+      "<perch:$2 type=\"image\" id=\"$3\" width=\"$10\"> $10w,",
+      "<perch:$2 type=\"image\" id=\"$3\" width=\"$11\"> $11w,",
+      "<perch:$2 type=\"image\" id=\"$3\" width=\"$12\"> $12w,",
+      "<perch:$2 type=\"image\" id=\"$3\" width=\"$13\"> $13w\">",
+      "$15"
+    ],
+    "description": "Perch Image"
+  },
+  "Square Perch Image": {
+    "prefix": "squareperchrimg",
+    "body": [
+      "<img class=\"$1\" itemprop=\"image\" loading=\"lazy\" src=\"<perch:$2 id=\"$3\" type=\"image\" width=\"$4\" height=\"$4\" label=\"$6\" crop>\" alt=\"<perch:$2 id=\"altOne\" type=\"text\" label=\"Image Description\">\"",
+      "sizes=\"(max-width: $7px) $8vw, $9vw\"",
+      "srcset=\"<perch:$2 type=\"image\" id=\"$3\" width=\"$4\" height=\"$4\" crop> $4w,",
+      "<perch:$2 type=\"image\" id=\"$3\" width=\"$10\" height=\"$10\" crop> $10w,",
+      "<perch:$2 type=\"image\" id=\"$3\" width=\"$11\" height=\"$11\" crop> $11w,",
+      "<perch:$2 type=\"image\" id=\"$3\" width=\"$12\" height=\"$12\" crop> $12w,",
+      "<perch:$2 type=\"image\" id=\"$3\" width=\"$13\" height=\"$13\" crop> $13w\">",
+      "$15"
+    ],
+    "description": "Square Perch Image"
+  },
+  "Perch Region": {
+    "prefix": "region",
+    "body": ["<?php perch_content(\"$1\"); ?>$2"],
+    "description": "Perch Region"
+  },
+  "Perch Layout": {
+    "prefix": "layout",
+    "body": ["<?php perch_layout(\"$1\"); ?>$2"],
+    "description": "Perch Layout"
+  },
+  "TODO": {
+    "prefix": "todo",
+    "body": ["<!-- TODO: $1 -->"],
+    "description": "TODO"
+  },
+  "FIXME": {
+    "prefix": "fixme",
+    "body": ["<!-- FIXME: $1 -->"],
+    "description": "FIXME"
+  },
+  "Perch Debug": {
+    "prefix": "debug",
+    "body": [
+      "<!-- TODO: Remove debug -->",
+      "<?php PerchUtil::output_debug(); ?>"
+    ],
+    "description": "Perch Debug"
+  },
+  "Perch Form Label": {
+    "prefix": "perchlabel",
+    "body": ["<perch:label for=\"$1\">$2</perch:label>$3"],
+    "description": "Perch Form Label"
+  },
+  "Perch Form Input": {
+    "prefix": "perchinput",
+    "body": [
+      "<perch:input class=\"$1\" id=\"$2\" type=\"$3\" label=\"$4\" ${5: required} >$6"
+    ],
+    "description": "Perch Form Input"
+  },
+  "Perch Form Checkbox": {
+    "prefix": "perchcheckbox",
+    "body": ["<perch:input type=\"checkbox\" id=\"$1\" value=\"$2\" />$3"],
+    "description": "Perch Form Checkbox"
+  },
+  "Textarea": {
+    "prefix": "perchtextarea",
+    "body": [
+      "<perch:input type=\"textarea\" class=\"$1\" id=\"$2\" name=\"$3\" label=\"$4\"  ${5: required} >"
+    ],
+    "description": "Textarea"
+  },
+  "Perch Template Path": {
+    "prefix": "templatepath",
+    "body": ["<perch:template path=\"$1\">"],
+    "description": "Template Path"
+  },
+  "PHP Tag": {
+    "prefix": "PHPTags",
+    "body": ["<?php $1 ?>"],
+    "description": "PHP Tag"
+  }
+}
