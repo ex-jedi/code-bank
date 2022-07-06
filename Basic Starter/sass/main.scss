@@ -1,8 +1,3 @@
-// *=======================================================================================
-// ** Styles for all pages  **
-// ** Reset based on https://hankchizljaw.com/wrote/a-modern-css-reset/  **
-// *=======================================================================================
-
 //*=========================================
 //** Imports **
 //*=========================================
@@ -11,7 +6,7 @@
 
 
 // *=========================================
-// ** Page & Site Wrappers **
+// ** Wrappers **
 // *=========================================
 
 html {
@@ -32,95 +27,3 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
-// *=========================================
-// ** Content container and block **
-// *=========================================
-
-//********** Headings**********
-
-h1 {
-  color: #f00;
-}
-
-//********** Containers **********
-
-section,
-main {
-  position: relative;
-  overflow: hidden;
-  //TODO: Remove if not needed
-  /*
-  * Fixes IOS Bug where scrolling breaks z-index
-  https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
-  */
-  -webkit-transform: translate3d(0, 0, 0);
-}
-
-//********** Paragraphs **********
-
-p {
-  margin-inline: auto;
-  margin-top: 0;
-}
-
-// *=========================================
-// ** Inline **
-// *=========================================
-
-//********** Images **********
-
-//* Make images easier to work with
-img {
-  max-width: 100%;
-  display: block;
-}
-
-//********** Links **********
-
-// Better to leave underlining on by default and switch it off where you don't want it
-
-a {
-  text-decoration: underline;
-  color: $link-colour;
-}
-
-//*=========================================
-//** Header **
-//*=========================================
-
-// *=========================================
-// ** Main Nav  **
-// *=========================================
-
-
-//********** Responsive Styles **********
-
-// *=========================================
-// ** Body **
-// *=========================================
-
-// *=========================================
-// ** Footer  **
-// *=========================================
-
-
-//*=========================================
-//** Utility & Accessibility  **
-//*=========================================
-
-//********** Visually Hidden  **********
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-//*=========================================
-//** Browser Specific Styles  **
-//*=========================================

@@ -17,66 +17,29 @@
 //*=========================================
 
 //* Font Stacks
-@mixin main-font-stack {
+@mixin heading-font-stack {
   font-family: 'futura-pt', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-//********** Sizing & spacing **********
-
-//* Header
-$header-spacing: 5rem;
-$header-spacing-large: 10rem;
-
-//* Headings
-
-// Sizing
-$heading-size-large: 10rem;
-
-// Spacing
-$heading-spacing-large: 5rem;
-
-//* Sections
-$section-spacing-extra-large: 40rem;
-$section-spacing-large: 30rem;
-
-//* Paragraphs
-
-// Font sizing
-$font-size-large: 10rem;
-
-// Spacing
-$paragraph-spacing-large: 10rem;
+@mixin main-font-stack {
+  font-family: 'futura-pt', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 //*=========================================
 //** Colours  **
 //*=========================================
 
-//TODO: Customise brand colours
-
-// Main brand Colours
+//  Colours
 $background-colour-light: #f4f1f0;
 $background-colour-dark: #1f1f1f;
 
-// Main Font Colours
+//  Font Colours
 $font-colour-light: #f4f1f0;
 $font-colour-dark: #252525;
-
-// Link Colours
-$link-colour: #3c3cf6;
-$link-visited: #8608fb;
-
-//*=========================================
-//** Effects and Animation  **
-//*=========================================
-
-//********** Transition Timings**********
-
-
-//* Timings
-
-//********** Keyframes **********
 
 //*=========================================
 //** Media Queries   **
@@ -130,20 +93,4 @@ $link-visited: #8608fb;
   @media (max-height: $point) and (orientation: $orientation) {
     @content;
   }
-}
-
-//*=========================================
-//** Accessability **
-//*=========================================
-
-//********** Visually Hidden  **********
-
-@mixin visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }
